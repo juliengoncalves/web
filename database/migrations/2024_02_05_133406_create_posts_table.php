@@ -9,10 +9,13 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->unsignedInteger('user_id');
+            $table->string('title');
+            $table->text('body');
             $table->timestamps();
         });
     }
@@ -22,12 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-    Schema::create('posts', function (Blueprint $table) {
-        $table->bigIncrements('id');
-        $table->unsignedInteger('user_id');
-        $table->string('title');
-        $table->text('body');
-        $table->timestamps();
-    });
+        Schema::dropIfExists('posts');
     }
 };

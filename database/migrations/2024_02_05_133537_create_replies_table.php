@@ -9,25 +9,23 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('replies', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('comment_id');
+            $table->text('body');
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-    Schema::replies('posts', function (Blueprint $table) {
-        $table->bigIncrements('id');
-        $table->unsignedInteger('user_id');
-        $table->string('title');
-        $table->text('body');
-        $table->timestamps();
-    });
+        Schema::dropIfExists('replies');
     }
 };
