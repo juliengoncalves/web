@@ -1,3 +1,29 @@
+# Création d'un BLOG minimaliste avec Laravel
+
+## Étapes de mise en place
+
+1. Installer le framework Laravel.
+2. Démarrer un nouveau projet.
+3. Initialiser le dossier Git.
+4. Ajouter les fichiers et effectuer un commit avec le message 'First Commit'.
+
+## Gestion des problèmes rencontrés
+
+- Problème d'authentification pour pousser le dépôt distant : Générer un jeton d'authentification dans GitHub pour remplacer le mot de passe.
+- Problème de connexion au dépôt distant : Vérifier la configuration Git par rapport au proxy et ajuster les paramètres si nécessaire (ex: `git config --global --unset https.proxy`).
+- Modification des pages PHP pour correspondre au schéma de la base de données défini.
+- Création de la page d'authentification avec Laravel Breeze en suivant la documentation officielle.
+
+## Documentation Laravel Breeze
+
+Suivre la documentation officielle disponible ici : [Laravel Breeze](https://laravel.com/docs/9.x/starter-kits#laravel-breeze).
+
+## Structure du blog
+
+- Création des différentes routes dans les fichiers PHP pour structurer le blog.
+
+___
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
